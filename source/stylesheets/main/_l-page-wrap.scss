@@ -1,0 +1,96 @@
+.l-page-wrap {
+  margin-top: 65px;
+  width: 100vw;
+  height: 100vh;
+  //background-color: red;
+  @extend %clearfix;
+
+  .projects {
+    width: 33.333%;
+    height: 50%;
+    position: relative;
+    display: block;
+    float: left;
+    z-index: 1;
+    transition: all .3s;
+
+    @media only screen and (max-width: 728px) and (orientation: portrait), only screen and (max-device-width: 414px) and (orientation: portrait) {
+      width: 50%;
+      height: 33.333%;
+    }
+
+    @media (min-width: 728px) {
+
+      &:before {
+        content: '';
+        transition: all .3s;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        z-index: 2;
+
+        &:before {
+          content: '';
+          background: rgba(0,0,0,0.2);
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      background: image-url('limitless.jpg') 50% 50% no-repeat;
+      background-size: contain;
+    }
+
+    &:nth-child(2) {
+      background: image-url('recovery_numb.jpg') 50% 50% no-repeat;
+      background-size: contain;
+    }
+
+    &:nth-child(3) {
+      background: image-url('recovery_tattoo.jpg') 50% 50% no-repeat;
+      background-size: contain;
+    }
+
+    &:nth-child(4) {
+      background: image-url('recovery_peircing.jpg') 50% 50% no-repeat;
+      background-size: contain;
+    }
+
+    &:nth-child(5) {
+      background: image-url('nose_labret.jpg') 50% 50% no-repeat;
+      background-size: contain;
+    }
+
+    &:nth-child(6) {
+      
+    }
+  }
+
+  .projects_page {
+    width: 100%;
+    max-width: 600px;
+    padding: 5%;
+    margin: 0 auto;
+
+    h3 {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: .9rem;
+      line-height: 1.25rem;
+    }
+  }
+}
